@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet"  href="../stylesheets/styleRegistrationDetails.css">
+</head>
+
+<body>
+    <h1 > Registration Form</h1>
+    <div class="box1">
+        <form action="/userDetail" method="post">
+            <h2>Personal Information</h2>
+            <label for="name"> Name:</label>
+            <input type="text" placeholder="Enter Your Name" name="name" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" placeholder="Mobile Number " id="phone" name="phone" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            
+
+            <h2>Additional Information</h2>
+            <label for="education level">education level:</label>
+            <select id="education-level" name="educationLevel" required>
+                <option value="under 12th">under 12th</option>
+                <option value="pursunig UG">pursuing UG</option>
+                <option value="pursunig PG">pursuing PG</option>
+            </select><br>
+
+            <label for="interests">Topics of Interest:</label>
+    <div class="interests">
+        <div class="box" onclick="toggleSelection(this)">Python</div>
+        <div class="box" onclick="toggleSelection(this)">JavaScript</div>
+        <div class="box" onclick="toggleSelection(this)">C++</div>
+        <div class="box" onclick="toggleSelection(this)">React</div>
+        <div class="box" onclick="toggleSelection(this)">Blockchain</div>
+        <div class="box" onclick="toggleSelection(this)">Cloud Computing</div>
+        <div class="box" onclick="toggleSelection(this)">AI/ML</div>
+        <div class="box" onclick="toggleSelection(this)">MERN</div>
+        <div class="box" onclick="toggleSelection(this)">Frontend</div>
+        <div class="box" onclick="toggleSelection(this)">Backend</div>
+    </div>
+    <!-- Hidden input to store selected interests -->
+    <input type="hidden" id="selectedInterests" name="interests" value="">
+    <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="../javascripts/registrationDetailScript.js"></script>
+</body>
+</html>

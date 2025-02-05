@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <!-- <link rel="stylesheet" href="../stylesheets/style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 text-white p-10">
+        <form action="/dbcreation" method="post">
+            <input class="px-3 py-2 rounded-md bg-transparent border-2 border-zinc-800 outline-none" type="text" placeholder="Name" name="name" >
+            
+            <select class="px-3 py-2 rounded-md bg-black border-2 border-zinc-800 outline-none" name="tech">
+                <option value="" disabled selected>Select Technology</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="C++">C++</option>
+                <option value="React">React</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="AI/ML">AI/ML</option>
+                <option value="MERN">MERN</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+            </select>
+            
+            <input class="px-3 py-2 rounded-md bg-transparent border-2 border-zinc-800 outline-none" type="text" placeholder="Company" name="company" >
+            
+            <input class="px-4 py-2 rounded-md bg-blue-600" type="submit" value="Create User">
+        </form>
+    </div>
+</body>
+</html>

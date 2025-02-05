@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/styleLogin.css">
+    <link rel="stylesheet" href="../stylesheets/styleHome.css">
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+    <div class="box">
+        <form action="/createUser" method="post">
+            <h1>New User Login</h1>
+            <h2>user info</h2>
+
+            <label for="email"><img src="../images/login/gmail.png" width="18px" height="18px"
+                    style="justify-content: center; align-items: center;">Email:</label>
+            <input type="email" placeholder="Email" id="email" name="email" required><br><br>
+
+
+            <label for="password"><img src="../images/login/password.png" width="18px" height="18px"
+                    style="justify-content: center; align-items: center;">password:</label>
+            <input type="password" placeholder="password" id="password" name="password" required><br><br>
+
+            
+            <!-- <a href="/login/newUser">NEW USER</a> -->
+            <input style="margin-top: 20px;" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

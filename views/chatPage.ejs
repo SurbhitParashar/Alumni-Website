@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="../stylesheets/stylechatPage.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="chat-header">Contacts</div>
+            <div class="contact-list" id="contactList">
+                <% contacts.forEach(contact => { %>
+                    <div class="contact" onclick="openChat('<%= contact.name %>')">
+                        <img src="<%= contact.profileImage || '../images/download.png' %>" alt="Profile">
+                        <span><%= contact.name %></span>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        <div class="chat-section">
+            <div class="chat-header" id="chatHeader">Select a Contact</div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-footer">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="../javascripts/chatPageScript.js"></script>
+</body>
+</html>
